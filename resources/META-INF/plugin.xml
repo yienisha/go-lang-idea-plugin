@@ -296,14 +296,6 @@
                      groupName="General" enabledByDefault="true" level="ERROR"
                      implementationClass="com.goide.inspections.GoMethodOnNonLocalTypeInspection"/>
     <!-- /general -->
-
-    <!-- GoTemplate -->
-    <lang.fileViewProviderFactory language="gohtml" implementationClass="com.goide.gotemplate.file.GoTemplateFileViewProviderFactory" />
-    <lang.parserDefinition language="gohtml" implementationClass="com.goide.gotemplate.GoTemplateParserDefinition"/>
-    <editorHighlighterProvider filetype="Go template" implementationClass="com.goide.gotemplate.highlighting.GoTemplateEditorHighlighterFactory"/>
-    <lang.syntaxHighlighterFactory language="gohtml" implementationClass="com.goide.gotemplate.highlighting.GoTemplateSyntaxHighlighterFactory"/>
-    <fileTypeFactory implementation="com.goide.gotemplate.file.GoTemplateFileTypeFactory" />
-    <!-- /GoTemplate -->
   </extensions>
   <actions>
     <action id="Go.NewGoFile" class="com.goide.actions.file.GoCreateFileAction"
@@ -365,6 +357,9 @@
 
   <!-- plan9 assembler -->
   <depends optional="true" config-file="plan9.xml">com.intellij.modules.lang</depends>
+
+  <!-- go template -->
+  <depends optional="true" config-file="gotemplate.xml">com.intellij.modules.lang</depends>
 
   <extensionPoints>
     <extensionPoint name="appengine.Extension" interface="com.intellij.appengine.AppEngineExtension"/>

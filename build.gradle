@@ -66,7 +66,7 @@ idea {
 
 repositories { maven { url "http://dl.bintray.com/jetbrains/golang" } }
 dependencies {
-  compile project(':utils'), project(':google-app-engine'), project(':google-app-engine:google-app-engine-yaml'), project(':plan9')
+  compile project(':utils'), project(':google-app-engine'), project(':google-app-engine:google-app-engine-yaml'), project(':plan9'), project(':gotemplate')
   runtime "com.jetbrains:delve:$delveVersion@zip"
 }
 
